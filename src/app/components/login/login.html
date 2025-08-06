@@ -1,4 +1,4 @@
- <div class="bg-container">
+ <!-- <div class="bg-container">
     <div class="login-card text-center text-white">
      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Signup Icon" class="login-icon" />
       <h4 class="mb-4">Login to Your Account</h4>
@@ -27,4 +27,39 @@
         </div>
       </form>
     </div>
+  </div> -->
+
+  <div class="container mt-4">
+  <h4 class="text-center mb-4">Course Management</h4>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover text-center align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Duration</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let course of courseList">
+          <td>{{ course.id }}</td>
+          <td>{{ course.title }}</td>
+          <td>{{ course.category }}</td>
+          <td>{{ course.duration }}</td>
+          <td>
+            <span class="badge bg-success" *ngIf="course.status === 'Active'">{{ course.status }}</span>
+            <span class="badge bg-secondary" *ngIf="course.status === 'Inactive'">{{ course.status }}</span>
+          </td>
+          <td>
+            <button class="btn btn-primary btn-sm me-2">Edit</button>
+            <button class="btn btn-danger btn-sm">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+</div>

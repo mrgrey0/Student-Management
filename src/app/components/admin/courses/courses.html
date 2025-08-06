@@ -1,0 +1,28 @@
+<table class="table table-bordered table-hover text-center">
+  <thead class="thead-dark">
+    <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Duration</th>
+            <th>Level</th>
+            <th>Status</th>
+            <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of courseList">
+      <td>{{course.id}}</td>
+      <td>{{course.title}}</td>
+      <td>{{course.category}}</td>
+      <td>{{course.duration}}</td>
+      <td>{{course.level}}</td>
+      <td>{{course.status}}</td>
+      <td>
+        <button class="btn btn-danger btn-sm">Add</button> &nbsp;&nbsp;
+        <button class="btn btn-success btn-sm">Delete</button>
+
+      </td>
+    </tr>
+  </tbody>
+</table>

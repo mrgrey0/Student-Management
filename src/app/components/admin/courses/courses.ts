@@ -1,21 +1,14 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-courses',
   standalone: false,
-  templateUrl: './login.html',
-  styleUrl: './login.css'
+  templateUrl: './courses.html',
+  styleUrl: './courses.css'
 })
-export class Login {
+export class Courses {
 
-//   constructor(private router: Router) {}
-
-// goToSignup() {
-//   this.router.navigate(['/signup']);
-// }
-
-  courseList:any=[
+  courseList:any[]=[
     {
     id: 'C101',
     title: 'Angular Essentials',
@@ -137,6 +130,4 @@ export class Login {
     status: 'Active'
   }
   ]
-
-
 }

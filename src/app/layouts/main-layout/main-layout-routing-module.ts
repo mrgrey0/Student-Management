@@ -3,15 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainLayout } from './main-layout';
 
 const routes: Routes = [
-  {
-    path:'dashboard',
-    component:MainLayout
-  },
-  {
-    path:'',
-    redirectTo:'dashboard',
-    pathMatch:'full'
-  }
+  
 ];
 
 @NgModule({
