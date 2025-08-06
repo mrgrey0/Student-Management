@@ -2,14 +2,14 @@
     <div class="login-card text-center text-white">
      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Signup Icon" class="login-icon" />
       <h4 class="mb-4">Login to Your Account</h4>
-      <form>
+      <form #loginForm="ngForm" (ngSubmit)="logIn()">
         <div class="form-group">
           <i class="bi bi-person input-icon"></i>
-          <input type="text" class="form-control" placeholder="Username" required />
+          <input type="text" class="form-control" [(ngModel)]="username" name="username" placeholder="Username" required />
         </div>
         <div class="form-group">
           <i class="bi bi-lock input-icon"></i>
-          <input type="password" class="form-control" placeholder="Password" required />
+          <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="password" required />
         </div>
 
         <div class="extra-links mb-3 text-start text-white">
