@@ -6,6 +6,12 @@ const routes: Routes = [
     import('./auth/auth-module').then(
       (m)=> m.AuthModule
     )
+  },
+  {
+    path: 'admin', loadChildren: ()=> 
+      import('./admin-dashboard/admin-dashboard-module').then(
+        (m)=> m.AdminDashboardModule
+      )
   }
 ];
 
